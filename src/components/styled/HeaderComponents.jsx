@@ -41,7 +41,8 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 32px;
+  margin-left: 32px;
+  margin-right: 64px;
 `;
 
 export const Logo = styled.img`
