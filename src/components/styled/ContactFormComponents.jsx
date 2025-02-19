@@ -67,7 +67,7 @@ export const InputField = styled.input`
   transition: border 0.1s;
 
   &::placeholder {
-    color: #757575;
+    color: #afafaf;
   }
   &:focus {
     outline: none;
@@ -90,7 +90,7 @@ export const TextArea = styled.textarea`
   transition: border 0.1s;
 
   &::placeholder {
-    color: #757575;
+    color: #afafaf;
   }
   &:focus {
     outline: none;

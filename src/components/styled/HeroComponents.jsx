@@ -14,6 +14,10 @@ export const HeroSection = styled.section`
 
 export const Logo = styled.img`
   width: 320px;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+    width: 280px;
+  }
 `
 
 export const HeroTitle = styled.h1`
@@ -50,38 +54,39 @@ export const HeroSubtitle = styled.h2`
   line-height: ${props => props.theme.fontSizes['xxl']};
   text-align: center;
   color: #1C293D;
-
+  max-width: 720px;
+  
   span {
-    color: #1051AB
+    color: #1051AB;
+    display: inline-block;
   }
-
-  @media screen and (max-width: ${props => props.theme.breakpoints.xxl}){
-    font-size: ${props => props.theme.fontSizes['xxl']};
-  }
+  
   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
     font-size: ${props => props.theme.fontSizes['xl']};
+    max-width: 500px;
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+    font-size: ${props => props.theme.fontSizes['xl']};
+    max-width: 320px;
   }
 `;
 
 export const LearnMoreButton = styled.a`
-  background: #1051AB;
-  padding: 12px 50px;
-  cursor: pointer;
+  padding: 16px 64px;
+  background-color: #1051AB;
   color: #fff;
-  font-weight: 600;
+  border: none;
+  cursor: pointer;
   font-size: ${props => props.theme.fontSizes['sm']};
-  transition: background 0.3s ease;
+  font-weight: 600;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background: #15407c;
+    background-color: #15407c;
   }
-
-  @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
-    font-size: ${props => props.theme.fontSizes['lg']};
-    margin-top: 48px;
-  }
-  @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-    font-size: ${props => props.theme.fontSizes['md']};
+  &:disabled {
+    background-color: #0a2d5e;
+    cursor: not-allowed;
   }
 `;

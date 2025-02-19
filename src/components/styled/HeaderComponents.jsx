@@ -19,7 +19,7 @@ export const HeaderSection = styled.header`
     display: none;
   }
   
-  @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
+  @media screen and (max-width: ${props => props.theme.breakpoints.xl}){
     padding: 20px 0px;
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
 
@@ -53,7 +53,7 @@ export const Nav = styled.ul`
   list-style: none;
   gap: 64px;
 
-  @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
+  @media screen and (max-width: ${props => props.theme.breakpoints.xl}){
     display: none;
   }
 `
@@ -70,7 +70,7 @@ export const NavOption = styled.li`
 export const HamburgerNav = styled.ul`
   display: none;
   
-  @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
+  @media screen and (max-width: ${props => props.theme.breakpoints.xl}){
     display: none;
     flex-direction: column;
     align-items: center;

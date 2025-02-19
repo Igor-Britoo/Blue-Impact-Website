@@ -13,8 +13,8 @@ const Hero = forwardRef(({ faqRef, ...props }, ref) => {
     <HeroSection ref={ref} {...props}>
       <Logo src={logo} alt="Blue Impact Logo" />
       <HeroSubtitle>
-        <span>Lorem Ipsum is simply dummy text of the printing and <br/></span>
-        typesetting industry. Lorem Ipsum has been the industry's <br/>
+        <span>Lorem Ipsum is simply dummy text of the printing and</span>
+        typesetting industry. Lorem Ipsum has been the industry's
         standard dummy text.
       </HeroSubtitle>
       <LearnMoreButton onClick={() => scrollToSection(faqRef)}>
