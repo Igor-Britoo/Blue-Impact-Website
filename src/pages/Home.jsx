@@ -6,6 +6,7 @@ import ContactForm from '../components/ContactForm';
 import FAQ from '../components/FAQ';
 import Header from '../components/Header';
 import MissionAndVision  from '../components/MissionAndVision';
+import Info  from '../components/Info';
 
 const Home = () => {
   const homeRef = useRef();
@@ -22,6 +23,7 @@ const Home = () => {
       />
       <Hero ref={homeRef} faqRef={faqRef} />
       <MissionAndVision />
+      <Info />
       <ContactForm ref={contactRef} />
       <FAQ ref={faqRef} />
     </Main>
