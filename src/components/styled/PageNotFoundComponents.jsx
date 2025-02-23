@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   display: flex;
+  background-color: #0A2B59;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  min-height: 512px;
+  min-height: 100vh; /* Fill the entire vertical space */
   justify-content: center;
   margin: 0;
   padding-top:128px;
