@@ -23,6 +23,7 @@ export const Popup = styled.div`
 export const PopupImage = styled.img`
   max-width: 90%;
   max-height: 90%;
+  border-radius: 15px;
 `;
 
 export const CarouselContainer = styled.div`
@@ -38,11 +39,20 @@ export const Card = styled.div`
 
 export const CardImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 350px;
+  object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
-
+  border-radius: 15px;
   &:hover {
     transform: scale(1.05);
   }
+`;
+
+export const GalleryHeading = styled.h2`
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 35px;
+  color: #0A2B59;
 `;
