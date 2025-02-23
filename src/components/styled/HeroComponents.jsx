@@ -90,3 +90,41 @@ export const LearnMoreButton = styled.a`
     cursor: not-allowed;
   }
 `;
+
+export const Popup = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
+export const Card = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+  height: 60%;
+  max-width: 800px;
+  max-height: 600px;
+`;
+
+export const CardContent = styled.div`
+  font-size: 16px;
+  color: #333;
+`;
