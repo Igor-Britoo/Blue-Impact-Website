@@ -48,11 +48,3 @@ export const CardImage = styled.img`
     transform: scale(1.05);
   }
 `;
-
-export const GalleryHeading = styled.h2`
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  font-size: 35px;
-  color: #0A2B59;
-`;

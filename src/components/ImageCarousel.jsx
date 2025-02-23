@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { CarouselContainer, Card, CardImage, Popup, PopupImage, GalleryHeading } from './styled/ImageCarouselComponents';
+import { CarouselContainer, Card, CardImage, Popup, PopupImage } from './styled/ImageCarouselComponents';
 
 const ImageCarousel = () => {
   const images = [
@@ -31,7 +31,6 @@ const ImageCarousel = () => {
 
   return (
     <CarouselContainer>
-      <GalleryHeading>GALERIA</GalleryHeading>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
