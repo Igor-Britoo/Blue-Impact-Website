@@ -1,52 +1,65 @@
 import styled from 'styled-components';
 
-export const FooterSection = styled.section`
-  box-sizing: border-box;
-  padding: 50px;
-  display: flex;
+export const FooterSection = styled.footer`
   background-color: #0A2B59;
   color: #FFF;
-  width: 100%;
+  display: flex;
   justify-content: center;
-
-  @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
-    text-align: center;
-  }
+  width: 100%; /* Ensure it occupies the full horizontal space */
 `;
 
 export const FooterContainer = styled.div`
   display: flex;
-  gap: 150px;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  gap: 50px;
+  margin-top: 30px;
 
-  @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-    gap: 100px;
-  }
-  @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+  @media screen and (max-width: 768px) {
     flex-direction: column;
-    gap: 50px;
+    align-items: center;
+    text-align: center;
   }
-`
+`;
 
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   h4 {
-    margin: 0;
     margin-bottom: 16px;
   }
 `;
 
+export const Support = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    height: 50px;
+  }
+`;
+
+export const Address = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+`;
+
 export const SocialLinks = styled.div`
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-
-  @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
-    margin-bottom: 0px;
-    display: flex;
-    justify-content: center;
-  }
+  gap: 15px;
+  margin-top: 20px;
 `;
 
 export const IconLink = styled.a`
@@ -55,30 +68,6 @@ export const IconLink = styled.a`
   transition: color 0.3s;
 
   &:hover {
-    color: #6c757d;
+    color: #9AB5D9;
   }
-`;
-
-export const Explore = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-export const ExploreLink = styled.a`
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
-
-  &:hover {
-    color: #6c757d;
-  }
-`;
-
-export const Contacts = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 16px;
 `;

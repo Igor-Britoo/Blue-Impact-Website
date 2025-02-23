@@ -1,40 +1,43 @@
-// Footer.js
 import React from 'react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { Contacts, Explore, ExploreLink, FooterContainer, FooterSection, IconLink, Section, SocialLinks } from './styled/FooterComponents';
+import { FaInstagram, FaLinkedin, FaXTwitter, FaYoutube } from 'react-icons/fa6';
+import { FooterSection, FooterContainer, Section, SocialLinks, IconLink, Address, ContactInfo, Support } from './styled/FooterComponents.jsx';
+import blueImpactLogo from '/hero-logo2.svg';
+import ufrpeLogo from '/ufrpe-logo.png';
 
 const Footer = () => {
   return (
     <FooterSection>
       <FooterContainer>
+        {/* Apoio */}
         <Section>
+          <Support>
+            <h4>APOIO</h4>
+            <img src={blueImpactLogo} alt="Blue Impact" />
+            <img src={ufrpeLogo} alt="UFRPE" />
+          </Support>
+        </Section>
+        {/* Endereço */}
+        <Section>
+          <h4>ENDEREÇO</h4>
+          <Address>
+            <p>Rua Lorem Ipsum, 37 - Dois Irmãos</p>
+            <p>CEP: 53000-195 - Recife - PE</p>
+            <p>(81) 3218-9827</p>
+            <ContactInfo>
+              <p>📧 blueimpactassessoria@gmail.com</p>
+              <p>📞 +55 81 XXXX-XXXX</p>
+            </ContactInfo>
+          </Address>
+        </Section>
+        {/* Redes Sociais */}
+        <Section>
+          <h4>SIGA A BLUE IMPACT</h4>
           <SocialLinks>
-            <IconLink href="https://www.linkedin.com/company/green-devs/">
-              <FaLinkedin />
-            </IconLink>
-            <IconLink href="#">
-              <FaInstagram />
-            </IconLink>
+            <IconLink href="#"><FaXTwitter /></IconLink>
+            <IconLink href="#"><FaInstagram /></IconLink>
+            <IconLink href="#"><FaYoutube /></IconLink>
+            <IconLink href="#"><FaLinkedin /></IconLink>
           </SocialLinks>
-        </Section>
-
-        <Section>
-          <Explore>
-            <h4>Explore</h4>
-            <ExploreLink href="#">Home</ExploreLink>
-            <ExploreLink href="#">Serviços</ExploreLink>
-            <ExploreLink href="#">Sobre nós</ExploreLink>
-            <ExploreLink href="#">Contato</ExploreLink>
-            <ExploreLink href="#">FAQ</ExploreLink>
-          </Explore>
-        </Section>
-
-        <Section>
-          <Contacts>
-            <h4>Contacts</h4>
-            <a href="tel:+558198128701">+55 (81) 9812-8701</a>
-            <a href="mailto:contato@blueimpact.tech">contato@blueimpact.tech</a>
-          </Contacts>
         </Section>
       </FooterContainer>
     </FooterSection>
