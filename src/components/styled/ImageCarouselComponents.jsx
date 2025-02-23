@@ -27,7 +27,6 @@ export const PopupImage = styled.img`
 
 export const CarouselContainer = styled.div`
   width: 100%;
-  padding: 20px;
   background-color: #9AB5D9;
 `;
 
