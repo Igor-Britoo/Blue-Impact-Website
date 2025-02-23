@@ -28,9 +28,17 @@ export const Section = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 40px;
 
   h4 {
-    margin-bottom: 16px;
+    margin-bottom: 26px;
+  }
+
+  p {
+    margin: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
   }
 `;
 
@@ -40,8 +48,16 @@ export const Support = styled.div`
   align-items: center;
   gap: 10px;
 
-  img {
-    height: 50px;
+  h4 {
+    margin-bottom: 16px;
+  }
+
+  .support-images {
+    display: flex;
+
+    img {
+      height: 50px;
+    }
   }
 `;
 
@@ -53,7 +69,19 @@ export const Address = styled.div`
 export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  text-align: left;
+  margin-top: 30px;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Add space between icon and text */
+  }
+
+  img {
+    width: 20px; /* Set icon size */
+    height: 20px;
+  }
 `;
 
 export const SocialLinks = styled.div`

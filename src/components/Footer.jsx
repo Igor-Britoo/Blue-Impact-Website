@@ -3,6 +3,8 @@ import { FaInstagram, FaLinkedin, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import { FooterSection, FooterContainer, Section, SocialLinks, IconLink, Address, ContactInfo, Support } from './styled/FooterComponents.jsx';
 import blueImpactLogo from '/hero-logo2.svg';
 import ufrpeLogo from '/ufrpe-logo.png';
+import mailIcon from '/mail-icon.svg';
+import phoneIcon from '/phone-icon.svg';
 
 const Footer = () => {
   return (
@@ -12,8 +14,10 @@ const Footer = () => {
         <Section>
           <Support>
             <h4>APOIO</h4>
-            <img src={blueImpactLogo} alt="Blue Impact" />
-            <img src={ufrpeLogo} alt="UFRPE" />
+            <div className="support-images">
+              <img src={blueImpactLogo} alt="Blue Impact" />
+              <img src={ufrpeLogo} alt="UFRPE" />
+            </div>
           </Support>
         </Section>
         {/* Endereço */}
@@ -22,10 +26,9 @@ const Footer = () => {
           <Address>
             <p>Rua Lorem Ipsum, 37 - Dois Irmãos</p>
             <p>CEP: 53000-195 - Recife - PE</p>
-            <p>(81) 3218-9827</p>
             <ContactInfo>
-              <p>📧 blueimpactassessoria@gmail.com</p>
-              <p>📞 +55 81 XXXX-XXXX</p>
+              <p><img src={mailIcon} alt="Email" /> blueimpactassessoria@gmail.com</p>
+              <p><img src={phoneIcon} alt="Phone" /> +55 81 XXXX-XXXX</p>
             </ContactInfo>
           </Address>
         </Section>
