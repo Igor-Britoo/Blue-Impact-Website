@@ -5,8 +5,9 @@ import Hero from '../components/Hero';
 import ContactForm from '../components/ContactForm';
 import FAQ from '../components/FAQ';
 import Header from '../components/Header';
-import MissionAndVision  from '../components/MissionAndVision';
-import Info  from '../components/Info';
+import MissionAndVision from '../components/MissionAndVision';
+import Info from '../components/Info';
+import ImageCarousel from '../components/ImageCarousel'; // Import the new component
 
 const Home = () => {
   const homeRef = useRef();
@@ -24,6 +25,7 @@ const Home = () => {
       <Hero ref={homeRef} faqRef={faqRef} />
       <MissionAndVision />
       <Info />
+      <ImageCarousel /> {/* Add the new component */}
       <ContactForm ref={contactRef} />
       <FAQ ref={faqRef} />
     </Main>
