@@ -6,7 +6,7 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  min-height: 512px;
+  min-height: 100vh; /* Fill the entire vertical space */
   justify-content: center;
   margin: 0;
   padding-top:128px;
