@@ -29,7 +29,7 @@ const OurTeam = () => {
         slidesPerView={5}
         navigation
         pagination={{ clickable: true }}
-        loop={true}
+        loop={false}
         breakpoints={{
           1024: { slidesPerView: 5 },
           768: { slidesPerView: 3 },
