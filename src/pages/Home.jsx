@@ -9,6 +9,7 @@ import ImageCarousel from '../components/ImageCarousel';
 import ContactForm from '../components/ContactForm';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import OurTeam from '../components/OurTeam';
 
 const Home = () => {
   const homeRef = useRef();
@@ -26,8 +27,9 @@ const Home = () => {
       <Hero ref={homeRef} faqRef={faqRef} />
       <MissionAndVision />
       <Info />
-      <ImageCarousel /> {/* Add the new component */}
+      <ImageCarousel />
       <ContactForm ref={contactRef} />
+      <OurTeam />
       <FAQ ref={faqRef} />
       <Footer />
     </Main>
