@@ -1,12 +1,15 @@
 import React, { useRef } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Main } from '../components/styled/HomeComponents';
+import Header from '../components/Header';
 import Hero from '../components/Hero';
+import MissionAndVision from '../components/MissionAndVision';
+import Info from '../components/Info';
+import ImageCarousel from '../components/ImageCarousel';
 import ContactForm from '../components/ContactForm';
 import FAQ from '../components/FAQ';
-import Header from '../components/Header';
-import MissionAndVision  from '../components/MissionAndVision';
-import Info  from '../components/Info';
+import Footer from '../components/Footer';
+import OurTeam from '../components/OurTeam';
 
 const Home = () => {
   const homeRef = useRef();
@@ -24,8 +27,11 @@ const Home = () => {
       <Hero ref={homeRef} faqRef={faqRef} />
       <MissionAndVision />
       <Info />
+      <ImageCarousel />
       <ContactForm ref={contactRef} />
+      <OurTeam />
       <FAQ ref={faqRef} />
+      <Footer />
     </Main>
   );
 };
