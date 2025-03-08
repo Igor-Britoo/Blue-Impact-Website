@@ -1,0 +1,18 @@
+### Register a new user
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpassword",
+    "email": "testuser@example.com"
+}
+
+### Obtain authentication token
+POST http://127.0.0.1:8000/api-token-auth/
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpassword"
+}
