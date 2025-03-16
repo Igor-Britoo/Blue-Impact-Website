@@ -4,20 +4,20 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { CarouselContainer, Card, CardImage } from './styled/OurTeamComponents';
+import { CarouselContainer, Card, CardImage, CardName } from './styled/OurTeamComponents';
 
 const OurTeam = () => {
-  const images = [
-    '/images/flavia_card.png',
-    '/images/thierry_card.png',
-    '/images/anne_card.png',
-    '/images/fernanda_card.png',
-    '/images/marilia_card.png',
-    '/images/andrey_card.png',
-    '/images/humber_card.png',
-    '/images/lucas_card.png',
-    '/images/matheus_card.png',
-    '/images/victoria_card.png'
+  const teamMembers = [
+    { name: 'Flavia', image: '/images/flavia_card.png' },
+    { name: 'Thierry', image: '/images/thierry_card.png' },
+    { name: 'Humberto', image: '/images/humber_card.png' },
+    { name: 'Victoria', image: '/images/victoria_card.png' },
+    { name: 'Anne', image: '/images/anne_card.png' },
+    { name: 'Andrey', image: '/images/andrey_card.png' },
+    { name: 'Marilia', image: '/images/marilia_card.png' },
+    { name: 'Lucas', image: '/images/lucas_card.png' },
+    { name: 'Fernanda', image: '/images/fernanda_card.png' },
+    { name: 'Matheus', image: '/images/matheus_card.png' },
   ];
 
   return (
@@ -36,10 +36,11 @@ const OurTeam = () => {
           480: { slidesPerView: 1 },
         }}
       >
-        {images.map((image, index) => (
+        {teamMembers.map((member, index) => (
           <SwiperSlide key={index}>
             <Card>
-              <CardImage src={image} alt={`Slide ${index + 1}`} />
+              <CardImage src={member.image} alt={`Slide ${index + 1}`} />
+              <CardName>{member.name}</CardName>
             </Card>
           </SwiperSlide>
         ))}
