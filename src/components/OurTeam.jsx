@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { CarouselContainer, Card, CardImage, CardName } from './styled/OurTeamComponents';
 
-const OurTeam = () => {
+const OurTeam = forwardRef((props, ref) => {
   const teamMembers = [
     { name: 'Flavia', image: '/images/flavia_card.png' },
     { name: 'Thierry', image: '/images/thierry_card.png' },
@@ -21,11 +21,11 @@ const OurTeam = () => {
   ];
 
   return (
-    <CarouselContainer>
+    <CarouselContainer ref={ref} {...props}>
       <h1>NOSSO TIME</h1>
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={0} // Reduce space between cards
+        spaceBetween={0}
         slidesPerView={5}
         navigation
         pagination={{ clickable: true }}
@@ -47,6 +47,6 @@ const OurTeam = () => {
       </Swiper>
     </CarouselContainer>
   );
-};
+});
 
 export default OurTeam;

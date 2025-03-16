@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Button, CircleCard, CircleText, CircleTitle, IconRow, InfoSection, LeftContainer, RightContainer, SmallCircle, SmallText, Title } from "./styled/InfoComponents";
 
-const Info = () => {
+const Info = forwardRef((props, ref) => {
   return (
-    <InfoSection>
+    <InfoSection ref={ref} {...props}>
       <LeftContainer>
         <CircleCard>
           <CircleTitle>SERVIÇOS</CircleTitle>
@@ -38,6 +38,6 @@ const Info = () => {
       </RightContainer>
     </InfoSection>
   );
-};
+});
 
 export default Info;

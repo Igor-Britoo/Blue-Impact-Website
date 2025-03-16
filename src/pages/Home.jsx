@@ -13,6 +13,8 @@ import OurTeam from '../components/OurTeam';
 const Home = () => {
   const homeRef = useRef();
   const contactRef = useRef();
+  const ourTeamRef = useRef();
+  const infoRef = useRef();
 
   return (
     <Main>
@@ -20,13 +22,15 @@ const Home = () => {
       <Header 
         homeRef={homeRef} 
         contactRef={contactRef} 
+        ourTeamRef={ourTeamRef}
+        infoRef={infoRef}
       />
       <Hero ref={homeRef}  />
       <MissionAndVision />
-      <Info />
+      <Info ref={infoRef}/>
       <ImageCarousel />
       <ContactForm ref={contactRef} />
-      <OurTeam />
+      <OurTeam ref={ourTeamRef} />
       <Footer />
     </Main>
   );
