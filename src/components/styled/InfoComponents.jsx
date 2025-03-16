@@ -45,6 +45,13 @@ export const CircleCard = styled.div`
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     margin: 0 5px;
   }
+
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    background: #15407c;
+    transform: scale(1.05);
+  }
 `;
 
 export const CircleTitle = styled.h3`

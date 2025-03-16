@@ -1,6 +1,7 @@
 import React, { useState, forwardRef } from 'react'
-import { HeroSection, Logo, HeroSubtitle, LearnMoreButton, Popup, Card, CardContent } from './styled/HeroComponents'
+import { HeroSection, Logo, HeroSubtitle, LearnMoreButton, Popup, Card, CardContent, PopupText } from './styled/HeroComponents'
 import logo from '/hero-logo.svg'
+import logo_popup from '/header-logo.svg'
 import heroCardImage from '/hero_saibamais_card.png'
 
 const Hero = forwardRef(({ faqRef, ...props }, ref) => {
@@ -28,7 +29,8 @@ const Hero = forwardRef(({ faqRef, ...props }, ref) => {
       <Popup className={isPopupOpen ? 'open' : ''} onClick={closePopup}>
         <Card style={{ backgroundImage: `url(${heroCardImage})` }}>
           <CardContent>
-            Aqui está o textão do card.
+            <Logo src={logo_popup} alt="Blue Impact Logo" />
+            <PopupText>Texto adicional do saiba mais</PopupText>
           </CardContent>
         </Card>
       </Popup>

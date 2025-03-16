@@ -128,3 +128,10 @@ export const CardContent = styled.div`
   font-size: 16px;
   color: #333;
 `;
+
+export const PopupText = styled.p`
+  margin-top: 100px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+`;
