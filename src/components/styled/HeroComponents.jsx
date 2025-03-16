@@ -104,6 +104,7 @@ export const Popup = styled.div`
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
 
   &.open {
     opacity: 1;
@@ -112,7 +113,6 @@ export const Popup = styled.div`
 `;
 
 export const Card = styled.div`
-  background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

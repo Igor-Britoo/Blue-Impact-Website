@@ -1,5 +1,5 @@
-import React, { useState, useEffect, forwardRef } from 'react'
-import { HeroSection, Logo, HeroTitle, HeroSubtitle, LearnMoreButton, Popup, Card, CardContent } from './styled/HeroComponents'
+import React, { useState, forwardRef } from 'react'
+import { HeroSection, Logo, HeroSubtitle, LearnMoreButton, Popup, Card, CardContent } from './styled/HeroComponents'
 import logo from '/hero-logo.svg'
 import heroCardImage from '/hero_saibamais_card.png'
 
@@ -15,14 +15,6 @@ const Hero = forwardRef(({ faqRef, ...props }, ref) => {
       setIsPopupOpen(false);
     }
   };
-
-  useEffect(() => {
-    if (isPopupOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }, [isPopupOpen]);
 
   return (
     <HeroSection ref={ref} {...props}>

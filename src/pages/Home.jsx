@@ -30,7 +30,7 @@ const Home = () => {
       <ImageCarousel />
       <ContactForm ref={contactRef} />
       <OurTeam />
-      <FAQ ref={faqRef} />
+      {/*<FAQ ref={faqRef} />*/}
       <Footer />
     </Main>
   );
