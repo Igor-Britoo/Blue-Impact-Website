@@ -3,7 +3,7 @@ import { HeaderSection, HeaderContainer, Logo, Nav, NavOption, HamburgerNav } fr
 import { useState } from 'react'
 import { Fade as Hamburger } from 'hamburger-react'
 
-const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
+const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef  }) => {
   const [navbarActive, setNavbarActive] = useState(false)
   const [isOpen, setOpen] = useState(false)
   
@@ -40,13 +40,10 @@ const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
             <a href="#publications" onClick={() => scrollToSection(servicesRef)}>PUBLICAÇÕES</a>
           </NavOption>
           <NavOption>
-            <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>SOBRE NÓS</a>
-          </NavOption>
-          <NavOption>
             <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
           </NavOption>
           <NavOption>
-            <a href="#faq" onClick={() => scrollToSection(faqRef)}>FAQ</a>
+            <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>NOSSO TIME</a>
           </NavOption>
         </Nav>
 
@@ -70,14 +67,12 @@ const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
           <a href="#publications" onClick={() => scrollToSection(servicesRef)}>PUBLICAÇÕES</a>
         </NavOption>
         <NavOption>
-          <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>SOBRE NÓS</a>
-        </NavOption>
-        <NavOption>
           <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
         </NavOption>
         <NavOption>
-          <a href="#faq" onClick={() => scrollToSection(faqRef)}>FAQ</a>
+          <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>NOSSO TIME</a>
         </NavOption>
+
       </HamburgerNav>
     </HeaderSection>
   );

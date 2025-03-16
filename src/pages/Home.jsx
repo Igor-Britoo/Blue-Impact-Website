@@ -7,14 +7,12 @@ import MissionAndVision from '../components/MissionAndVision';
 import Info from '../components/Info';
 import ImageCarousel from '../components/ImageCarousel';
 import ContactForm from '../components/ContactForm';
-import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import OurTeam from '../components/OurTeam';
 
 const Home = () => {
   const homeRef = useRef();
   const contactRef = useRef();
-  const faqRef = useRef();
 
   return (
     <Main>
@@ -22,15 +20,13 @@ const Home = () => {
       <Header 
         homeRef={homeRef} 
         contactRef={contactRef} 
-        faqRef={faqRef} 
       />
-      <Hero ref={homeRef} faqRef={faqRef} />
+      <Hero ref={homeRef}  />
       <MissionAndVision />
       <Info />
       <ImageCarousel />
       <ContactForm ref={contactRef} />
       <OurTeam />
-      {/*<FAQ ref={faqRef} />*/}
       <Footer />
     </Main>
   );
