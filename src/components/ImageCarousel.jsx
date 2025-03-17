@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -7,17 +7,28 @@ import 'swiper/css/pagination';
 import { CarouselContainer, Card, CardImage, Popup, PopupImage } from './styled/ImageCarouselComponents';
 
 const ImageCarousel = () => {
-  const images = [
-    '/images/car_img01.jpg',
-    '/images/car_img02.jpg',
-    '/images/car_img03.jpg',
-    '/images/car_img04.jpg',
-    '/images/car_img05.jpg',
-    '/images/car_img06.jpg'
-  ];
-
+  const [images, setImages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/images/', {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ce2f7e64660917ed86d59457e6bd99d7649a5dda'
+          }
+        });
+        const data = await response.json();
+        setImages(data.map(item => item.image));
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }
+    };
+
+    fetchImages();
+  }, []);
 
   const handleImageClick = (image) => {
     setCurrentImage(image);

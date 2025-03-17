@@ -1,4 +1,4 @@
 ### Test GET images endpoint
 GET http://127.0.0.1:8000/api/images/
 Content-Type: application/json
-Authorization: Token d32ba6109af763d2d95b3eb443bf681d61a141db
+Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
