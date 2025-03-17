@@ -1,18 +1,4 @@
-### Register a new user
-POST http://127.0.0.1:8000/api/register/
+### Test GET images endpoint
+GET http://127.0.0.1:8000/api/images/
 Content-Type: application/json
-
-{
-    "username": "testuser",
-    "password": "testpassword",
-    "email": "testuser@example.com"
-}
-
-### Obtain authentication token
-POST http://127.0.0.1:8000/api-token-auth/
-Content-Type: application/json
-
-{
-    "username": "testuser",
-    "password": "testpassword"
-}
+Authorization: Token d32ba6109af763d2d95b3eb443bf681d61a141db

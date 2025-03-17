@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'images',
+    'app',
     'rest_framework',
     'rest_framework.authtoken',
     'drf_spectacular',
@@ -137,10 +138,11 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'EcoGuided API',
-    'DESCRIPTION': 'API documentation for the EcoGuided project',
+    'TITLE': 'Blue Impact API',
+    'DESCRIPTION': 'API documentation for the Blue Impact project',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
 
-AUTH_USER_MODEL = 'images.User'
+MEDIA_URL = '/images_carousel/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
