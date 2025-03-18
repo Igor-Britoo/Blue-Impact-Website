@@ -20,8 +20,8 @@ export const Card = styled.div`
 `;
 
 export const CardImage = styled.img`
-  width: 75%;
-  height: 75%;
+  width: 230px;
+  height: 350px;
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -29,8 +29,10 @@ export const CardImage = styled.img`
 `;
 
 export const CardName = styled.div`
+  width: 220px;
+  height: 100px;
   position: absolute;
-  bottom: 40px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -39,4 +41,21 @@ export const CardName = styled.div`
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+
+    a {
+      color: #0073b1; /* Default color */
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: inherit; /* Invert to original text color */
+      }
+    }
+  }
 `;

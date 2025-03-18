@@ -30,7 +30,13 @@ const Hero = forwardRef(({ faqRef, ...props }, ref) => {
         <Card style={{ backgroundImage: `url(${heroCardImage})` }}>
           <CardContent>
             <Logo src={logo_popup} alt="Blue Impact Logo" />
-            <PopupText>Texto adicional do saiba mais</PopupText>
+            <PopupText>
+              A Blue Impact combina experiência técnica e liderança na gestão pesqueira no Nordeste do Brasil, com mais de 20 anos de atuação em pesquisa, gestão e inovação. Sua equipe multidisciplinar tem expertise em avaliação de estoques pesqueiros e participou de fóruns nacionais e internacionais, como ICCAT, FAO e MPA.
+
+              A empresa surgiu para suprir uma lacuna na gestão pesqueira no Norte e Nordeste, regiões com desafios específicos e pouco foco do eixo Sul-Sudeste. Com uma abordagem inovadora, está desenvolvendo um laboratório pioneiro e uma plataforma interativa para promover transparência e colaboração na gestão dos recursos pesqueiros.
+
+              Ainda em fase inicial, a Blue Impact busca se tornar referência na avaliação e gestão sustentável da pesca, contribuindo para a conservação dos ecossistemas marinhos e o desenvolvimento sustentável do setor.
+            </PopupText>
           </CardContent>
         </Card>
       </Popup>

@@ -39,8 +39,8 @@ export const Card = styled.div`
 `;
 
 export const CardImage = styled.img`
-  width: 100%;
-  height: 350px;
+  width: 400px;
+  height: 300px;
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
