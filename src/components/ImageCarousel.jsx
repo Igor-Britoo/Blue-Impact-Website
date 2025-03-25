@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { CarouselContainer, Card, CardImage, Popup, PopupImage } from './styled/ImageCarouselComponents';
+import fetchData from '../utils/api'
 
 const ImageCarousel = () => {
   const [images, setImages] = useState([]);
@@ -14,13 +15,7 @@ const ImageCarousel = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/images/', {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Token ce2f7e64660917ed86d59457e6bd99d7649a5dda'
-          }
-        });
-        const data = await response.json();
+        const data = await fetchData('/images/');
         setImages(data.map(item => item.image));
       } catch (error) {
         console.error('Error fetching images:', error);
@@ -63,7 +58,7 @@ const ImageCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Popup isOpen={isOpen} onClick={handleClose}>
+      <Popup $isOpen={isOpen} onClick={handleClose}>
         <PopupImage src={currentImage} alt="Popup" />
       </Popup>
     </CarouselContainer>

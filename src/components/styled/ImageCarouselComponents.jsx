@@ -8,7 +8,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const Popup = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   position: fixed;
   top: 0;
   left: 0;

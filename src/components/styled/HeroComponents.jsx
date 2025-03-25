@@ -91,7 +91,57 @@ export const LearnMoreButton = styled.a`
   }
 `;
 
-export const Popup = styled.div`
+export const PopupContainer = styled.div`
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 60%;
+  max-width: 900px;
+  max-height: 80vh;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.md}){
+    width: 80%;
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
+    width: 85%;
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    width: 90%;
+  }
+`;
+
+export const PopupTitle = styled.h2`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #2d3953;
+  padding: 24px 32px 0px 32px;
+`;
+
+export const PopupTextContainer = styled.div`
+  background-size: cover;
+  background-position: top;
+  padding-top: 40px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+`;
+
+export const PopupText = styled.p`
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: justify;
+  padding: 20px 32px;
+  height: 60vh;
+  max-height: fit-content;
+  overflow-y: auto;
+`;
+
+export const PopupOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -101,37 +151,15 @@ export const Popup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
-
-  &.open {
-    opacity: 1;
-    visibility: visible;
-  }
 `;
 
-export const Card = styled.div`
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-size: cover;
-  background-position: center;
-  width: 60%;
-  height: 60%;
-  max-width: 800px;
-  max-height: 600px;
-`;
-
-export const CardContent = styled.div`
-  font-size: 16px;
-  color: #333;
-`;
-
-export const PopupText = styled.p`
-  margin-top: 100px;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: justify;
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 `;
