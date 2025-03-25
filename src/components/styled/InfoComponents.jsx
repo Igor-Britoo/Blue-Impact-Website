@@ -95,6 +95,13 @@ export const IconRow = styled.div`
   gap: 30px;
   margin: 24px 0;
 
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     flex-wrap: wrap;
     justify-content: center;
@@ -134,6 +141,7 @@ export const SmallText = styled.p`
   color: #0a2b59;
   text-align: center;
   margin-top: 5px;
+  width: 150px;
 `;
 
 export const Button = styled.button`

@@ -37,7 +37,8 @@ export const PdfsContainer = styled.div`
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: 400px;
+  min-height: 350px;
+  max-height: 60vh;
   overflow-y: auto;
 `;
 
