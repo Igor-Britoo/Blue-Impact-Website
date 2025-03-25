@@ -41,6 +41,7 @@ export const CircleCard = styled.div`
   border-radius: 50%;
   color: white;
   text-align: center;
+  cursor: pointer;
 
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     margin: 0 5px;
@@ -109,9 +110,20 @@ export const SmallCircle = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     margin: 0 5px;
+  }
+
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    background-color: #15407c;
+    transform: scale(1.05);
   }
 `;
 
