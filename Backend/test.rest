@@ -2,3 +2,23 @@
 GET http://127.0.0.1:8000/api/images/
 Content-Type: application/json
 Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+
+### Test GET projects endpoint
+GET http://127.0.0.1:8000/api/projects/
+Content-Type: application/json
+Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+
+### Test GET specific project endpoint
+GET http://127.0.0.1:8000/api/projects/1/
+Content-Type: application/json
+Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+
+### Test GET publications endpoint
+GET http://127.0.0.1:8000/api/publications/
+Content-Type: application/json
+Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+
+### Test GET specific publication endpoint
+GET http://127.0.0.1:8000/api/publications/1/
+Content-Type: application/json
+Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
