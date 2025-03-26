@@ -15,6 +15,7 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
   const scrollToSection = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
+      if (isOpen) setOpen(false)
     }
   };
 
@@ -28,13 +29,13 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
             <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
           </NavOption>
           <NavOption>
-            <a href="#lab" onClick={() => scrollToSection(infoRef)}>LAB</a>
-          </NavOption>
-          <NavOption>
             <a href="#services" onClick={() => scrollToSection(infoRef)}>SERVIÇOS</a>
           </NavOption>
           <NavOption>
             <a href="#blog" onClick={() => scrollToSection(infoRef)}>BLOG</a>
+          </NavOption>
+          <NavOption>
+            <a href="#projects" onClick={() => scrollToSection(infoRef)}>PROJETOS</a>
           </NavOption>
           <NavOption>
             <a href="#publications" onClick={() => scrollToSection(infoRef)}>PUBLICAÇÕES</a>
@@ -43,7 +44,7 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
             <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
           </NavOption>
           <NavOption>
-            <a href="#about-us" onClick={() => scrollToSection(ourTeamRef)}>NOSSO TIME</a>
+            <a href="#our-team" onClick={() => scrollToSection(ourTeamRef)}>NOSSO TIME</a>
           </NavOption>
         </Nav>
 
@@ -55,13 +56,13 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
           <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
         </NavOption>
         <NavOption>
-          <a href="#lab" onClick={() => scrollToSection(infoRef)}>LAB</a>
-        </NavOption>
-        <NavOption>
           <a href="#services" onClick={() => scrollToSection(infoRef)}>SERVIÇOS</a>
         </NavOption>
         <NavOption>
           <a href="#blog" onClick={() => scrollToSection(infoRef)}>BLOG</a>
+        </NavOption>
+        <NavOption>
+          <a href="#projects" onClick={() => scrollToSection(infoRef)}>PROJETOS</a>
         </NavOption>
         <NavOption>
           <a href="#publications" onClick={() => scrollToSection(infoRef)}>PUBLICAÇÕES</a>
@@ -70,7 +71,7 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
           <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
         </NavOption>
         <NavOption>
-          <a href="#about-us" onClick={() => scrollToSection(ourTeamRef)}>NOSSO TIME</a>
+          <a href="#our-team" onClick={() => scrollToSection(ourTeamRef)}>NOSSO TIME</a>
         </NavOption>
 
       </HamburgerNav>
