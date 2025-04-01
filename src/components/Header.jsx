@@ -3,7 +3,7 @@ import { HeaderSection, HeaderContainer, Logo, Nav, NavOption, HamburgerNav } fr
 import { useState } from 'react'
 import { Fade as Hamburger } from 'hamburger-react'
 
-const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
+const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
   const [navbarActive, setNavbarActive] = useState(false)
   const [isOpen, setOpen] = useState(false)
   
@@ -15,6 +15,7 @@ const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
   const scrollToSection = (ref) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
+      if (isOpen) setOpen(false)
     }
   };
 
@@ -28,25 +29,22 @@ const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
             <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
           </NavOption>
           <NavOption>
-            <a href="#lab" onClick={() => scrollToSection(servicesRef)}>LAB</a>
+            <a href="#services" onClick={() => scrollToSection(infoRef)}>SERVIÇOS</a>
           </NavOption>
           <NavOption>
-            <a href="#services" onClick={() => scrollToSection(servicesRef)}>SERVIÇOS</a>
+            <a href="#blog" onClick={() => scrollToSection(infoRef)}>BLOG</a>
           </NavOption>
           <NavOption>
-            <a href="#blog" onClick={() => scrollToSection(servicesRef)}>BLOG</a>
+            <a href="#projects" onClick={() => scrollToSection(infoRef)}>PROJETOS</a>
           </NavOption>
           <NavOption>
-            <a href="#publications" onClick={() => scrollToSection(servicesRef)}>PUBLICAÇÕES</a>
-          </NavOption>
-          <NavOption>
-            <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>SOBRE NÓS</a>
+            <a href="#publications" onClick={() => scrollToSection(infoRef)}>PUBLICAÇÕES</a>
           </NavOption>
           <NavOption>
             <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
           </NavOption>
           <NavOption>
-            <a href="#faq" onClick={() => scrollToSection(faqRef)}>FAQ</a>
+            <a href="#our-team" onClick={() => scrollToSection(ourTeamRef)}>NOSSO TIME</a>
           </NavOption>
         </Nav>
 
@@ -58,26 +56,24 @@ const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
           <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
         </NavOption>
         <NavOption>
-          <a href="#lab" onClick={() => scrollToSection(servicesRef)}>LAB</a>
+          <a href="#services" onClick={() => scrollToSection(infoRef)}>SERVIÇOS</a>
         </NavOption>
         <NavOption>
-          <a href="#services" onClick={() => scrollToSection(servicesRef)}>SERVIÇOS</a>
+          <a href="#blog" onClick={() => scrollToSection(infoRef)}>BLOG</a>
         </NavOption>
         <NavOption>
-          <a href="#blog" onClick={() => scrollToSection(servicesRef)}>BLOG</a>
+          <a href="#projects" onClick={() => scrollToSection(infoRef)}>PROJETOS</a>
         </NavOption>
         <NavOption>
-          <a href="#publications" onClick={() => scrollToSection(servicesRef)}>PUBLICAÇÕES</a>
-        </NavOption>
-        <NavOption>
-          <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>SOBRE NÓS</a>
+          <a href="#publications" onClick={() => scrollToSection(infoRef)}>PUBLICAÇÕES</a>
         </NavOption>
         <NavOption>
           <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
         </NavOption>
         <NavOption>
-          <a href="#faq" onClick={() => scrollToSection(faqRef)}>FAQ</a>
+          <a href="#our-team" onClick={() => scrollToSection(ourTeamRef)}>NOSSO TIME</a>
         </NavOption>
+
       </HamburgerNav>
     </HeaderSection>
   );

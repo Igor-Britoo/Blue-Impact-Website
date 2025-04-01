@@ -8,7 +8,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const Popup = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
@@ -39,8 +39,8 @@ export const Card = styled.div`
 `;
 
 export const CardImage = styled.img`
-  width: 100%;
-  height: 350px;
+  width: 400px;
+  height: 300px;
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;

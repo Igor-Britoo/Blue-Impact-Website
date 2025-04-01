@@ -1,21 +1,30 @@
 services:
-  blue_impact_landing_page:
-    build: ./
+  frontend:
+    build:
+      context: ./
+      args:
+        - VITE_API_URL=
+        - VITE_BEARER_TOKEN=
+    image: blueimpact-frontend
     restart: always
+    depends_on:
+      - backend
     ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./certbot/www:/var/www/certbot/:ro
-      - ./certbot/conf/:/etc/nginx/ssl/:ro
+      - "80:80"
     networks:
       - proxy
 
-  certbot:
-    image: certbot/certbot:latest
+  backend:
+    build: ./Backend
+    image: blueimpact-backend
+    ports:
+      - "8000:8000"
     volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - ./Backend/database:/Backend/database
+      - ./Backend/media/projects:/Backend/media/projects
+      - ./Backend/media/publications:/Backend/media/publications
+    networks:
+      - proxy
 
 networks:
   proxy:

@@ -1,23 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { CarouselContainer, Card, CardImage, Popup, PopupImage } from './styled/ImageCarouselComponents';
+import fetchData from '../utils/api'
 
 const ImageCarousel = () => {
-  const images = [
-    '/images/car_img01.jpg',
-    '/images/car_img02.jpg',
-    '/images/car_img03.jpg',
-    '/images/car_img04.jpg',
-    '/images/car_img05.jpg',
-    '/images/car_img06.jpg'
-  ];
-
+  const [images, setImages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const data = await fetchData('/images/');
+        setImages(data.map(item => item.image));
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }
+    };
+
+    fetchImages();
+  }, []);
 
   const handleImageClick = (image) => {
     setCurrentImage(image);
@@ -52,7 +58,7 @@ const ImageCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Popup isOpen={isOpen} onClick={handleClose}>
+      <Popup $isOpen={isOpen} onClick={handleClose}>
         <PopupImage src={currentImage} alt="Popup" />
       </Popup>
     </CarouselContainer>

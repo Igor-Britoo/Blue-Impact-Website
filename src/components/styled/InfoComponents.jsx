@@ -41,9 +41,17 @@ export const CircleCard = styled.div`
   border-radius: 50%;
   color: white;
   text-align: center;
+  cursor: pointer;
 
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     margin: 0 5px;
+  }
+
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    background: #15407c;
+    transform: scale(1.05);
   }
 `;
 
@@ -87,6 +95,13 @@ export const IconRow = styled.div`
   gap: 30px;
   margin: 24px 0;
 
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     flex-wrap: wrap;
     justify-content: center;
@@ -102,9 +117,20 @@ export const SmallCircle = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     margin: 0 5px;
+  }
+
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    background-color: #15407c;
+    transform: scale(1.05);
   }
 `;
 
@@ -115,6 +141,7 @@ export const SmallText = styled.p`
   color: #0a2b59;
   text-align: center;
   margin-top: 5px;
+  width: 150px;
 `;
 
 export const Button = styled.button`
