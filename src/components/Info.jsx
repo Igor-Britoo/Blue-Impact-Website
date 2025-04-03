@@ -40,7 +40,7 @@ const Info = forwardRef((props, ref) => {
           <CircleTitle>SERVIÇOS</CircleTitle>
           <CircleText>lorem ipsum dolor sit amet consectetur adipiscing elit</CircleText>
         </CircleCard>
-        <CircleCard>
+        <CircleCard onClick={() => window.open('https://tapioca.ird.fr/category/news-events/', '_blank')}>
           <CircleTitle>BLOG</CircleTitle>
           <CircleText>lorem ipsum dolor sit amet consectetur adipiscing elit</CircleText>
         </CircleCard>
