@@ -69,18 +69,13 @@ export const Address = styled.div`
 export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: center;
   margin-top: 30px;
 
   p {
     display: flex;
     align-items: center;
     gap: 8px; /* Add space between icon and text */
-  }
-
-  img {
-    width: 20px; /* Set icon size */
-    height: 20px;
   }
 `;
 
