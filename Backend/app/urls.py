@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ImageListView, ProjectViewSet, PublicationViewSet
+from .views import ImageListView, ProjectViewSet, PublicationViewSet, SendEmailAPIView
 
 urlpatterns = [
     path('images/', ImageListView.as_view(), name='image-list'),
@@ -7,4 +7,5 @@ urlpatterns = [
     path('projects/<int:pk>/', ProjectViewSet.as_view({'get': 'retrieve'}), name='project-detail'),
     path('publications/', PublicationViewSet.as_view({'get': 'list'}), name='publications-list'),
     path('publications/<int:pk>/', PublicationViewSet.as_view({'get': 'retrieve'}), name='publication-detail'),
+    path('send-email/', SendEmailAPIView.as_view(), name='send_email')
 ]
