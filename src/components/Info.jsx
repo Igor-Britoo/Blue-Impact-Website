@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import { Button, CircleCard, CircleText, CircleTitle, IconRow, InfoSection, LeftContainer, RightContainer, SmallCircle, SmallText, Title } from "./styled/InfoComponents";
-import fetchData from '../utils/api'
+import { fetchData } from '../utils/api'
 import PdfsPopup from './PdfsPopup'
 import academicCapIcon from '/academic_cap.svg'
 
@@ -57,7 +57,7 @@ const Info = forwardRef((props, ref) => {
               <SmallCircle 
                 index={index} 
                 style={{ backgroundImage: `url(${academicCapIcon})` }}
-                onClick={() => window.location.href = publication.file}
+                onClick={() => window.location.href = publication.doi}
               ></SmallCircle>
               <SmallText index={index}>{publication.title.toUpperCase()}</SmallText>
             </div>

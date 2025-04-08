@@ -71,6 +71,11 @@ export const Label = styled.p`
   letter-spacing: 0.1em;
   color: #ffffff;
   margin-top: 5px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
 `;
 
 export const Overlay = styled.div`
