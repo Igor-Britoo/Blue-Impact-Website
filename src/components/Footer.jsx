@@ -3,6 +3,11 @@ import { FaInstagram, FaLinkedin, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import { FooterSection, FooterContainer, Section, SocialLinks, IconLink, Address, ContactInfo, Support } from './styled/FooterComponents.jsx';
 import blueImpactLogo from '/hero-logo2.svg';
 import ufrpeLogo from '/ufrpe-logo.png';
+import ufpaLogo from '/ufpa-logo.png';
+import irdLogo from '/ird-logo.png';
+import tapiocaLogo from '/tapioca-logo.png';
+import depaqLogo from '/depaq-logo.png';
+import bioImpactLogo from '/bioimpact-logo.png';
 import mailIcon from '/mail-icon.svg';
 import phoneIcon from '/phone-icon.svg';
 
@@ -15,8 +20,26 @@ const Footer = () => {
           <Support>
             <h4>APOIO</h4>
             <div className="support-images">
-              <img src={blueImpactLogo} alt="Blue Impact" />
-              <img src={ufrpeLogo} alt="UFRPE" />
+              <a href="https://www.ufrpe.br" target="_blank" rel="noopener noreferrer">
+                <img src={ufrpeLogo} alt="UFRPE" />
+              </a>
+              <a href="https://www.ufpa.br" target="_blank" rel="noopener noreferrer">
+                <img src={ufpaLogo} alt="UFPA" />
+              </a>
+              <a href="https://www.ird.fr" target="_blank" rel="noopener noreferrer">
+                <img src={irdLogo} alt="IRD" />
+              </a>
+            </div>
+            <div className="support-images">
+            <a href="https://www.depaq.ufrpe.br" target="_blank" rel="noopener noreferrer">
+                <img src={depaqLogo} alt="DEPAQ" />
+              </a>
+              <a href="https://tapioca.ird.fr/" target="_blank" rel="noopener noreferrer">
+                <img src={tapiocaLogo} alt="Tapioca" />
+              </a>
+              <a href="https://bioimpact.wixsite.com/bioimpact" target="_blank" rel="noopener noreferrer">
+                <img src={bioImpactLogo} alt="BioImpact" />
+              </a>
             </div>
           </Support>
         </Section>
