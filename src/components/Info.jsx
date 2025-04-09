@@ -57,7 +57,7 @@ const Info = forwardRef((props, ref) => {
               <SmallCircle 
                 index={index} 
                 style={{ backgroundImage: `url(${academicCapIcon})` }}
-                onClick={() => window.location.href = publication.doi}
+                onClick={() => window.open(publication.doi, '_blank')}
               ></SmallCircle>
               <SmallText index={index}>{publication.title.toUpperCase()}</SmallText>
             </div>
