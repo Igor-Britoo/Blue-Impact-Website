@@ -22,3 +22,17 @@ Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
 GET http://127.0.0.1:8000/api/publications/1/
 Content-Type: application/json
 Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+
+### Test POST contact endpoint
+POST http://127.0.0.1:8000/api/send-email/
+Content-Type: application/json
+Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+
+{
+    "data": {
+        "name": "Teste",
+        "email": "teste@gmail.com",
+        "phone": "(81) 99999-9999",
+        "description": "Gostaria de saber mais sobre os serviços do Blue Impact."
+    }
+}

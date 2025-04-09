@@ -142,6 +142,11 @@ export const SmallText = styled.p`
   text-align: center;
   margin-top: 5px;
   width: 150px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
 `;
 
 export const Button = styled.button`

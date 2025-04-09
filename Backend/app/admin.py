@@ -11,4 +11,4 @@ class ProjetoAdmin(admin.ModelAdmin):
 
 @admin.register(Publication)
 class PublicacaoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'uploaded_at')
+    list_display = ('title', 'uploaded_at', 'doi')

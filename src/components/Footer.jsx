@@ -24,11 +24,10 @@ const Footer = () => {
         <Section>
           <h4>ENDEREÇO</h4>
           <Address>
-            <p>Rua Lorem Ipsum, 37 - Dois Irmãos</p>
-            <p>CEP: 53000-195 - Recife - PE</p>
+            <p>DEPAQ/UFRPE - R. Manuel de Medeiros, s/n - Dois Irmãos, Recife - PE</p>
+            <p>CEP: 52171-011 - Recife - PE</p>
             <ContactInfo>
               <p><img src={mailIcon} alt="Email" /> blueimpactassessoria@gmail.com</p>
-              <p><img src={phoneIcon} alt="Phone" /> +55 81 XXXX-XXXX</p>
             </ContactInfo>
           </Address>
         </Section>
@@ -36,10 +35,7 @@ const Footer = () => {
         <Section>
           <h4>SIGA A BLUE IMPACT</h4>
           <SocialLinks>
-            <IconLink href="#"><FaXTwitter /></IconLink>
-            <IconLink href="#"><FaInstagram /></IconLink>
-            <IconLink href="#"><FaYoutube /></IconLink>
-            <IconLink href="#"><FaLinkedin /></IconLink>
+            <IconLink href="https://www.instagram.com/blueimpact_/"><FaInstagram /></IconLink>
           </SocialLinks>
         </Section>
       </FooterContainer>

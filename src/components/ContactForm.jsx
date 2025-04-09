@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from "react"
 import { FormContainer, InputContainer, InputLabel, InputField, SubmitButton, TextArea, FormTitle, ErrorSpan } from './styled/ContactFormComponents'
 import { toast } from 'react-toastify'
-import emailjs from '@emailjs/browser'
+import { postData } from '../utils/api'
 
 const ContactForm = forwardRef((props, ref) => {
   const [isSubmittingForm, setIsSubmittingForm] = useState(false)
@@ -62,14 +62,13 @@ const ContactForm = forwardRef((props, ref) => {
 
     if (Object.keys(newErrors).length === 0) { 
       setErrors({})
-      const templateParams = {
+      const data = {
         name: formValues.name,
         email: formValues.email,
-        phoneNumber: formValues.phoneNumber,
+        phone: formValues.phoneNumber,
         description: formValues.description,
       }
-      
-      emailjs.send('service_ejvb3go', 'template_t3lc4uc', templateParams, 'sUNRYBDxDbS-FJcLp')
+      postData('/send-email/', { data })
       .then((result) => {
         console.log(result)
         toast.success('Email sent successfully!', {
@@ -82,6 +81,7 @@ const ContactForm = forwardRef((props, ref) => {
           theme: "dark",
         })
         resetForm()
+        setTimeout(() => setIsSubmittingForm(false), 500)
       })
       .catch((error) => {
         console.log(error)
@@ -94,12 +94,13 @@ const ContactForm = forwardRef((props, ref) => {
           progress: undefined,
           theme: "dark",
         })
-      })
+        setTimeout(() => setIsSubmittingForm(false), 500)
+      })      
     }
     else {  
       setErrors(newErrors)
+      setTimeout(() => setIsSubmittingForm(false), 500)
     }
-    setTimeout(() => setIsSubmittingForm(false), 500)
   }
 
   return (

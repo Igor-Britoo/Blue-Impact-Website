@@ -17,7 +17,7 @@ const PdfsPopup = ({ files, isOpen, setIsOpen, title }) => {
               <PdfsGrid >
                 {files.map((file, index) => (
                   <Pdf key={index}>
-                    <Icon src={pdfIcon} alt="PDF" onClick={() => window.location.href = file.file}/>
+                    <Icon src={pdfIcon} alt="PDF" onClick={() => window.location.href = file.doi}/>
                     <Label>{file.title}</Label>
                   </Pdf>
                 ))}
