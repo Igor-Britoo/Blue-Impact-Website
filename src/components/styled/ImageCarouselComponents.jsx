@@ -48,4 +48,10 @@ export const CardImage = styled.img`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    width: 95%;
+    max-width: 400px;
+    height: auto;
+  }
 `;

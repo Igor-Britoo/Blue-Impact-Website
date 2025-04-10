@@ -81,13 +81,15 @@ const OurTeam = forwardRef((props, ref) => {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={0}
-        slidesPerView={5}
+        slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         loop={false}
         breakpoints={{
-          1024: { slidesPerView: 5 },
+          1280: { slidesPerView: 5 },
+          1024: { slidesPerView: 4 },
           768: { slidesPerView: 3 },
+          640: { slidesPerView: 2 },
           480: { slidesPerView: 1 },
         }}
       >
