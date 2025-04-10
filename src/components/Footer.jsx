@@ -58,7 +58,9 @@ const Footer = () => {
         <Section>
           <h4>SIGA A BLUE IMPACT</h4>
           <SocialLinks>
-            <IconLink href="https://www.instagram.com/blueimpact_/"><FaInstagram /></IconLink>
+            <IconLink href="https://www.instagram.com/blueimpact_/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </IconLink>
           </SocialLinks>
         </Section>
       </FooterContainer>

@@ -9,8 +9,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
     overflow-y: auto;
-    min-height: 100vh;
-    background-color: #072B2B;
+    min-height: 75vh;
+    background-color: #ffffff;
   }
 `;
 
