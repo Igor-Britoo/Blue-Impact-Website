@@ -43,13 +43,18 @@ export const Title = styled.h1`
 `;
 
 export const Box = styled.div`
-  width: 640px;
+  width: fit-content;
+  padding: 0 50px;
   margin-top: 0px;
   margin-bottom: 20px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    padding: 0;
+  }
 `;
 
 export const BoxTitle = styled.h2`
