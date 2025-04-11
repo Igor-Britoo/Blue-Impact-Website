@@ -29,7 +29,7 @@ export const PopupImage = styled.img`
 export const CarouselContainer = styled.div`
   width: 100%;
   background-color: #fff;
-  padding: 20px 0;
+  margin-bottom: 20px;
 `;
 
 export const Card = styled.div`

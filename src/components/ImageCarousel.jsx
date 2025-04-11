@@ -37,6 +37,7 @@ const ImageCarousel = () => {
 
   return (
     <CarouselContainer>
+      <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#0A2B59', fontSize: '2.3rem' }}>GALERIA</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}

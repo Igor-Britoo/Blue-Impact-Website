@@ -13,6 +13,8 @@ import Theme from "./styles/Theme"
 import Header from "./components/Header";
 import PageNotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Services from "./pages/Services";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />
+      },
+      {
+        path: "projects",
+        element: <Projects />
+      },
+      {
+        path: "services",
+        element: <Services />
       },
     ],
   },

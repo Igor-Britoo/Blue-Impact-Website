@@ -1,6 +1,6 @@
 import React from "react";
 import { CloseButton, Container, Icon, Label, Overlay, Pdf, PdfsContainer, PdfsGrid, Title } from "./styled/PdfsPopupComponents";
-import pdfIcon from "/pdf_icon.svg";
+import pdfIcon from "/pub-icon.png";
 import wavesImage from '/waves_saibamais.svg'
 
 const PdfsPopup = ({ files, isOpen, setIsOpen, title }) => {
@@ -17,7 +17,7 @@ const PdfsPopup = ({ files, isOpen, setIsOpen, title }) => {
               <PdfsGrid >
                 {files.map((file, index) => (
                   <Pdf key={index}>
-                    <Icon src={pdfIcon} alt="PDF" onClick={() => window.location.href = file.doi}/>
+                    <Icon src={pdfIcon} alt="PDF" onClick={() => window.open(file.doi, '_blank')}/>
                     <Label>{file.title}</Label>
                   </Pdf>
                 ))}
