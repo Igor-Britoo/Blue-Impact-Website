@@ -2,11 +2,22 @@ import styled from 'styled-components';
 
 export const ProjectSection = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 1560px;
   background: #ffffff;
+  margin-bottom: 30px;
+  justify-self: center;
+`;
+
+export const ProjectsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: fit-content;
 `;
 
 export const Title = styled.h1`
@@ -33,15 +44,12 @@ export const Title = styled.h1`
 
 export const Box = styled.div`
   width: 640px;
-  height: 340px;
   margin-top: 0px;
   margin-bottom: 20px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
 `;
 
 export const BoxTitle = styled.h2`
@@ -57,6 +65,11 @@ export const HorizontalLine = styled.div`
   width: 300px;
   border: 1.5px solid #0A2B59;
   margin-bottom: 20px;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    max-width: 300px;
+    width: 80%;
+  }
 `;
 
 export const BoxText = styled.p`
@@ -67,4 +80,9 @@ export const BoxText = styled.p`
   text-align: justify;
   color: #0A2B59;
   width: 400px;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    max-width: 400px;
+    width: 80%;
+  }
 `;

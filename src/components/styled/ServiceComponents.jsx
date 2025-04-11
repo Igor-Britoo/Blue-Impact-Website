@@ -2,12 +2,22 @@ import styled from "styled-components";
 
 export const ServiceSection = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1560px;
+  background: #ffffff;
+  margin-bottom: 30px;
+  justify-self: center;
+`;
+
+export const ServicesContainer = styled.div`
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: #ffffff;
-  margin-bottom: 30px;
+  height: fit-content;
 `;
 
 export const Title = styled.h1`
@@ -37,11 +47,10 @@ export const Box = styled.div`
   height: 200px;
   margin: 20px; 
   background: #ffffff; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    width: 250px;
+  }
 `;
 
 export const BoxTitle = styled.h2`
@@ -55,7 +64,6 @@ export const BoxTitle = styled.h2`
 `;
 
 export const HorizontalLine = styled.div`
-  width: 300px;
   border: 1.5px solid #1051ab;
   margin-bottom: 20px;
 `;
@@ -67,6 +75,5 @@ export const BoxText = styled.p`
   line-height: 17px;
   text-align: justify;
   color: #0A2B59;
-  width: 300px;
 `;
 
