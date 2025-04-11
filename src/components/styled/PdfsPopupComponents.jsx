@@ -60,7 +60,7 @@ export const Pdf = styled.div`
 
 export const Icon = styled.img`
   width: 76px;
-  height: 54px;
+  height: 76px;
   cursor: pointer;
 `;
 

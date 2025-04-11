@@ -54,6 +54,7 @@ export const Support = styled.div`
 
   .support-images {
     display: flex;
+    gap: 10px;
 
     img {
       height: 50px;

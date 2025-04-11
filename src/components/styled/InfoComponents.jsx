@@ -62,13 +62,6 @@ export const CircleTitle = styled.h3`
   margin-bottom: 10px;
 `;
 
-export const CircleText = styled.p`
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-`;
-
 export const RightContainer = styled.div`
   width: 640px;
   display: flex;
@@ -158,4 +151,8 @@ export const Button = styled.button`
   padding: 8px 32px;
   border: none;
   cursor: pointer;
+   
+  &:hover {
+    background-color: #15407c;
+  }
 `;
