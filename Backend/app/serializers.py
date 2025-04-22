@@ -14,7 +14,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 class PublicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication
-        fields = ['id', 'title', 'uploaded_at', 'doi']
+        fields = ['id', 'title', 'authors', 'year', 'doi', 'uploaded_at']
 
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:

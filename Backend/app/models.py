@@ -21,15 +21,26 @@ class Project(models.Model):
     descricao = models.TextField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.title
+
 class Publication(models.Model):
     title = models.CharField(max_length=255)
-    uploaded_at = models.DateTimeField(auto_now_add=True)
+    authors = models.TextField(blank=True, null=True)
+    year = models.PositiveIntegerField(blank=True, null=True)
     doi = models.URLField(blank=True, null=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
 class Service(models.Model):
     title = models.CharField(max_length=255)
     descricao = models.TextField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
 @receiver(models.signals.post_delete, sender=Image)
 def auto_delete_image_on_delete(sender, instance, **kwargs):
