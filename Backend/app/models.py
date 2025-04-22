@@ -26,6 +26,11 @@ class Publication(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
     doi = models.URLField(blank=True, null=True)
 
+class Service(models.Model):
+    title = models.CharField(max_length=255)
+    descricao = models.TextField(blank=True, null=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
 @receiver(models.signals.post_delete, sender=Image)
 def auto_delete_image_on_delete(sender, instance, **kwargs):
     if instance.image:

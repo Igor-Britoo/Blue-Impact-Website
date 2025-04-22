@@ -1,32 +1,42 @@
 ### Test GET images endpoint
 GET http://127.0.0.1:8000/api/images/
 Content-Type: application/json
-Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
 
 ### Test GET projects endpoint
 GET http://127.0.0.1:8000/api/projects/
 Content-Type: application/json
-Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
 
 ### Test GET specific project endpoint
-GET http://127.0.0.1:8000/api/projects/1/
+GET http://127.0.0.1:8000/api/projects/4/
 Content-Type: application/json
-Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
 
 ### Test GET publications endpoint
 GET http://127.0.0.1:8000/api/publications/
 Content-Type: application/json
-Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
 
 ### Test GET specific publication endpoint
 GET http://127.0.0.1:8000/api/publications/1/
 Content-Type: application/json
-Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
+
+### Test GET services endpoint
+GET http://127.0.0.1:8000/api/services/
+Content-Type: application/json
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
+
+### Test GET specific service endpoint
+GET http://127.0.0.1:8000/api/services/1/
+Content-Type: application/json
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
 
 ### Test POST contact endpoint
 POST http://127.0.0.1:8000/api/send-email/
 Content-Type: application/json
-Authorization: Token ce2f7e64660917ed86d59457e6bd99d7649a5dda
+Authorization: Token e1c250295a0d4d2c37ae9cac2888c3d12f80936f
 
 {
     "data": {

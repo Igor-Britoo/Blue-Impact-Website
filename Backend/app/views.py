@@ -3,8 +3,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
-from .models import Image, Project, Publication
-from .serializers import ImageSerializer, ProjectSerializer, PublicationSerializer
+from .models import Image, Project, Publication, Service
+from .serializers import ImageSerializer, ProjectSerializer, PublicationSerializer, ServiceSerializer
 
 class ImageListView(generics.ListAPIView):
     queryset = Image.objects.all()
@@ -17,6 +17,10 @@ class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
 class PublicationViewSet(viewsets.ReadOnlyModelViewSet):  
     queryset = Publication.objects.all()
     serializer_class = PublicationSerializer
+
+class ServiceViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
 
 class SendEmailAPIView(APIView):
     def post(self, request, *args, **kwargs):
