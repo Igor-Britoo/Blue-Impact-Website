@@ -7,7 +7,7 @@ class ImageAdmin(admin.ModelAdmin):
     
 @admin.register(Project)
 class ProjetoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'uploaded_at')
+    list_display = ('title', 'descricao', 'uploaded_at')
 
 @admin.register(Publication)
 class PublicacaoAdmin(admin.ModelAdmin):

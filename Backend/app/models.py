@@ -18,6 +18,7 @@ class Image(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
+    descricao = models.TextField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
 class Publication(models.Model):
