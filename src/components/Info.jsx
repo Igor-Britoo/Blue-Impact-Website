@@ -65,9 +65,38 @@ const Info = forwardRef((props, ref) => {
           </IconRow>
           <Button onClick={() => setPublicationsPopupIsOpen(true)}>VER MAIS</Button>
         </RightContainer>
-        <PdfsPopup title={"PUBLICAÇÕES"} files={publications} isOpen={publicationsPopupIsOpen} setIsOpen={setPublicationsPopupIsOpen} />
+        {publicationsPopupIsOpen && (
+          <PdfsPopup title={"PUBLICAÇÕES"} isOpen={publicationsPopupIsOpen} setIsOpen={setPublicationsPopupIsOpen}>
+            <div style={{ maxHeight: '60vh', overflowY: 'auto', padding: '10px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+                <thead>
+                  <tr>
+                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Título</th>
+                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Autores</th>
+                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>Ano de Publicação</th>
+                    <th style={{ border: '1px solid #ddd', padding: '8px' }}>DOI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {publications.map((publication, index) => (
+                    <tr key={index}>
+                      <td style={{ border: '1px solid #ddd', padding: '8px' }}>{publication.title}</td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px' }}>{publication.authors || 'N/A'}</td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px' }}>{publication.year || 'N/A'}</td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px' }}>
+                        <a href={publication.doi} target="_blank" rel="noopener noreferrer">
+                          {publication.doi || 'N/A'}
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </PdfsPopup>
+        )}
       </InfoSection>
-     </>
+    </>
   );
 });
 
