@@ -33,11 +33,7 @@ const Hero = forwardRef(({ faqRef, ...props }, ref) => {
             <PopupTitle>BLUE IMPACT</PopupTitle>
             <PopupTextContainer style={{ backgroundImage: `url(${wavesImage})` }}>
               <PopupText>
-                A Blue Impact combina experiência técnica e liderança na gestão pesqueira no Nordeste do Brasil, com mais de 20 anos de atuação em pesquisa, gestão e inovação. Sua equipe multidisciplinar tem expertise em avaliação de estoques pesqueiros e participou de fóruns nacionais e internacionais, como ICCAT, FAO e MPA.
-
-                A empresa surgiu para suprir uma lacuna na gestão pesqueira no Norte e Nordeste, regiões com desafios específicos e pouco foco do eixo Sul-Sudeste. Com uma abordagem inovadora, está desenvolvendo um laboratório pioneiro e uma plataforma interativa para promover transparência e colaboração na gestão dos recursos pesqueiros.
-
-                Ainda em fase inicial, a Blue Impact busca se tornar referência na avaliação e gestão sustentável da pesca, contribuindo para a conservação dos ecossistemas marinhos e o desenvolvimento sustentável do setor.
+                A Blue Impact é marcada por uma combinação única de experiência técnica e liderança em modelagem, gestão pesqueira e monitoramento ambiental na região Nordeste do Brasil. Com formação sólida e especializada em métodos avançados de avaliação de estoques pesqueiros e gestão de recursos aquáticos; monitoramento ambiental e educação ambienta, a equipe, multidisciplinar, acumula vasta experiência profissional em pesquisa, gestão e inovação. Membros da equipe vem atuando na área técnica há mais de 20 anos, junto a agências públicas e privadas, nacionais e internacionais, e contam com a colaboração e capacitação contínua de parceiros de várias regiões do Brasil, Estados Unidos e França. A motivação para a criação da Blue Impact veio através da identificação de uma lacuna crítica, principalmente na gestão pesqueira e na região Norte e Nordeste do Brasil, em um mercado dominado pelo eixo Sudeste/Sul, regiões que enfrentam desafios significativos e peculiares na avaliação, manejo e transparência dos dados dos estoques pesqueiros. Nossa startup foi orientada pela necessidade de fornecer soluções práticas e baseadas em evidências para enfrentar esses desafios.
               </PopupText>
             </PopupTextContainer>
           </PopupContainer>

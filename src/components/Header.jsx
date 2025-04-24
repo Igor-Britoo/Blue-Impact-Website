@@ -29,13 +29,13 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
             <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
           </NavOption>
           <NavOption>
-            <a href="#services" onClick={() => scrollToSection(infoRef)}>SERVIÇOS</a>
+            <a href="/services">SERVIÇOS</a>
           </NavOption>
           <NavOption>
-            <a href="#blog" onClick={() => scrollToSection(infoRef)}>BLOG</a>
+            <a href="https://tapioca.ird.fr/category/news-events/" target="_blank" rel="noopener noreferrer">BLOG</a>
           </NavOption>
           <NavOption>
-            <a href="#projects" onClick={() => scrollToSection(infoRef)}>PROJETOS</a>
+            <a href="/projects">PROJETOS</a>
           </NavOption>
           <NavOption>
             <a href="#publications" onClick={() => scrollToSection(infoRef)}>PUBLICAÇÕES</a>
@@ -56,13 +56,13 @@ const Header = ({ homeRef, infoRef, ourTeamRef, contactRef  }) => {
           <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
         </NavOption>
         <NavOption>
-          <a href="#services" onClick={() => scrollToSection(infoRef)}>SERVIÇOS</a>
+          <a href="/services">SERVIÇOS</a>
         </NavOption>
         <NavOption>
-          <a href="#blog" onClick={() => scrollToSection(infoRef)}>BLOG</a>
+          <a href="https://tapioca.ird.fr/category/news-events/" target="_blank" rel="noopener noreferrer">BLOG</a>
         </NavOption>
         <NavOption>
-          <a href="#projects" onClick={() => scrollToSection(infoRef)}>PROJETOS</a>
+          <a href="/projects">PROJETOS</a>
         </NavOption>
         <NavOption>
           <a href="#publications" onClick={() => scrollToSection(infoRef)}>PUBLICAÇÕES</a>

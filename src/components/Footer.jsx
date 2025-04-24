@@ -8,6 +8,8 @@ import irdLogo from '/ird-logo.png';
 import tapiocaLogo from '/tapioca-logo.png';
 import depaqLogo from '/depaq-logo.png';
 import bioImpactLogo from '/bioimpact-logo.png';
+import sebraeLogo from '/sebrae-logo.png';
+import facepeLogo from '/facepe-logo.png';
 import mailIcon from '/mail-icon.svg';
 import phoneIcon from '/phone-icon.svg';
 
@@ -26,12 +28,18 @@ const Footer = () => {
               <a href="https://www.ufpa.br" target="_blank" rel="noopener noreferrer">
                 <img src={ufpaLogo} alt="UFPA" />
               </a>
-              <a href="https://www.ird.fr" target="_blank" rel="noopener noreferrer">
-                <img src={irdLogo} alt="IRD" />
+              <a href="https://www.facepe.br" target="_blank" rel="noopener noreferrer">
+                <img src={facepeLogo} alt="FACEPE" />
+              </a>
+              <a href="https://www.sebrae.com.br" target="_blank" rel="noopener noreferrer">
+                <img src={sebraeLogo} alt="SEBRAE" />
               </a>
             </div>
             <div className="support-images">
-            <a href="https://www.depaq.ufrpe.br" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.ird.fr" target="_blank" rel="noopener noreferrer">
+                <img src={irdLogo} alt="IRD" />
+              </a>
+              <a href="https://www.depaq.ufrpe.br" target="_blank" rel="noopener noreferrer">
                 <img src={depaqLogo} alt="DEPAQ" />
               </a>
               <a href="https://tapioca.ird.fr/" target="_blank" rel="noopener noreferrer">

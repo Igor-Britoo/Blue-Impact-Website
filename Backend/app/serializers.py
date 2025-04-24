@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Image, Project, Publication
+from .models import Image, Project, Publication, Service
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -9,9 +9,14 @@ class ImageSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['id', 'title', 'uploaded_at']
+        fields = ['id', 'title', 'descricao', 'uploaded_at']
 
 class PublicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication
-        fields = ['id', 'title', 'uploaded_at', 'doi']
+        fields = ['id', 'title', 'authors', 'year', 'doi', 'uploaded_at']
+
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Service
+        fields = ['id', 'title', 'descricao', 'uploaded_at']

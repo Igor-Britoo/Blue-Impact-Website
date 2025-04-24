@@ -1,28 +1,17 @@
 import React from "react";
-import { CloseButton, Container, Icon, Label, Overlay, Pdf, PdfsContainer, PdfsGrid, Title } from "./styled/PdfsPopupComponents";
-import pdfIcon from "/pub-icon.png";
-import wavesImage from '/waves_saibamais.svg'
+import { CloseButton, Container, Overlay, Title } from "./styled/PdfsPopupComponents";
 
-const PdfsPopup = ({ files, isOpen, setIsOpen, title }) => {
+const PdfsPopup = ({ title, isOpen, setIsOpen, children }) => {
   const closePopup = () => setIsOpen(false);
 
   return (
     <>
       {isOpen && (
         <Overlay onClick={closePopup}>
-          <Container>
+          <Container onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={closePopup}>&times;</CloseButton>
             <Title>{title}</Title>
-            <PdfsContainer style={{ backgroundImage: `url(${wavesImage})` }}>
-              <PdfsGrid >
-                {files.map((file, index) => (
-                  <Pdf key={index}>
-                    <Icon src={pdfIcon} alt="PDF" onClick={() => window.open(file.doi, '_blank')}/>
-                    <Label>{file.title}</Label>
-                  </Pdf>
-                ))}
-              </PdfsGrid>
-            </PdfsContainer>
+            {children}
           </Container>
         </Overlay>
       )}
