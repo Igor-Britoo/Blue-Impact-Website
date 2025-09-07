@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import Image, Project, Publication, Service
 
 class ImageSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(use_url=True)
+
     class Meta:
         model = Image
         fields = ['id', 'title', 'image', 'uploaded_at']

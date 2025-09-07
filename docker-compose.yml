@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   frontend:
     build:
       context: ./
@@ -11,8 +12,6 @@ services:
     restart: always
     depends_on:
       - backend
-    ports:
-      - "80:80"
     networks:
       - proxy
 
@@ -25,11 +24,23 @@ services:
       - ./Backend/database:/Backend/database
       - ./Backend/media/projects:/Backend/media/projects
       - ./Backend/media/publications:/Backend/media/publications
-    environment:
-      - DJANGO_SECRET_KEY=
-      - DJANGO_DEBUG=
-      - EMAIL_HOST_USER=
-      - EMAIL_HOST_PASSWORD=
+      - ./Backend/staticfiles:/Backend/staticfiles
+    env_file:
+      - ./Backend/.env
+    networks:
+      - proxy
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./Backend/staticfiles:/static
+      - ./Backend/media:/media
+      - ./dist:/usr/share/nginx/html
+    depends_on:
+      - backend
     networks:
       - proxy
 

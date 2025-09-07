@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copie todos os arquivos do projeto para o diretório de trabalho
 COPY . .
 
+# Coletar arquivos estáticos para produção (após copiar os arquivos)
+RUN python3 manage.py collectstatic --noinput
+
 # Exponha a porta que o aplicativo irá rodar
 EXPOSE 8000
 
