@@ -34,11 +34,13 @@ services:
     image: nginx:alpine
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./Backend/staticfiles:/static
       - ./Backend/media:/media
       - ./dist:/usr/share/nginx/html
+      - /etc/letsencrypt/live/blueimpact.eco.br:/etc/letsencrypt/live/blueimpact.eco.br:ro
     depends_on:
       - backend
     networks:
