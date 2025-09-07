@@ -40,7 +40,7 @@ services:
       - ./Backend/staticfiles:/static
       - ./Backend/media:/media
       - ./dist:/usr/share/nginx/html
-      - /etc/letsencrypt/live/blueimpact.eco.br:/etc/letsencrypt/live/blueimpact.eco.br:ro
+      - ./certs:/etc/letsencrypt/live/blueimpact.eco.br:ro
     depends_on:
       - backend
     networks:
