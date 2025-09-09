@@ -1,33 +1,43 @@
-# Etapa 1: Build da aplicação React com Vite
-FROM node:18 AS build
+# Multi-stage build: Frontend + Nginx
+FROM node:18-alpine AS build-step
 
-WORKDIR /app
+WORKDIR /frontend/
 
-# Copiar os arquivos de projeto e instalar dependências
-COPY package.json package-lock.json ./
-RUN npm install
+# Copiar arquivos de dependências
+COPY ./package.json ./
+COPY ./package-lock.json ./
 
-# Copiar os arquivos da aplicação
-COPY . .
+# Instalar dependências
+RUN npm ci --only=production=false --silent
 
-# Definir argumentos de build
+# Copiar código fonte
+COPY . ./
+
+# Argumentos de build para variáveis de ambiente
 ARG VITE_API_URL
 ARG VITE_BEARER_TOKEN
 
-# Construir a aplicação para produção
-RUN npm run build
+# Definir variáveis de ambiente
+ENV VITE_API_URL=$VITE_API_URL
+ENV VITE_BEARER_TOKEN=$VITE_BEARER_TOKEN
 
-# Etapa 2: Configuração do Nginx para servir os arquivos estáticos
+# Configurar Node.js para baixo uso de memória
+ENV NODE_OPTIONS="--max-old-space-size=256"
+
+# Build da aplicação
+RUN npm run build:low-mem
+
+# Estágio final: Nginx
 FROM nginx:alpine
 
-# Copiar os arquivos estáticos do build para o Nginx
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copiar arquivos buildados do frontend
+COPY --from=build-step /frontend/dist /usr/share/nginx/html
 
-# Copiar o arquivo de configuração customizado do Nginx
+# Copiar configuração do nginx
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expor a porta 80 para que o Nginx possa servir o conteúdo
-EXPOSE 80
+# Expor portas
+EXPOSE 80 443
 
-# Iniciar o Nginx no modo de primeiro plano
+# Comando padrão do nginx
 CMD ["nginx", "-g", "daemon off;"]
